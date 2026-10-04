@@ -16,14 +16,17 @@ header img {
 }
 
 /* Headings */
-h1, h2, p {
+h1, h2, h3, p {
     text-align: center;
 }
 
-h2, h2, p {
+h2, h2, h3, p {
     color: #050505;
 }
 
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
 /* Footer */
 footer {
     border-top: 1px solid #050505;
