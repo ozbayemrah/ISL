@@ -9,8 +9,8 @@ body {
 /* Header image */
 header img {
     with: 100%;
-    height: 240px;
-    object-fit: scale-down;
+    height: 100vh;
+    object-fit: scover;
     display: block;
     margin: 0 auto;
 }
