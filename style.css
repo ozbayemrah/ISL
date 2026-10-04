@@ -8,10 +8,9 @@ body {
 
 /* Header image */
 header img {
-    with: 100%;
+    width: 100%;
     height: 100vh;
     object-fit: cover;
-    display: block;
     margin: 0 auto;
 }
 
