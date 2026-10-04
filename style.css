@@ -10,16 +10,18 @@ body {
 header img {
     with: 100%;
     height: 240px;
-    object-fit: fill;
+    object-fit: scale-down;
     align-items: center;
 }
 
 /* Headings */
 h1 {
+    text-align: center;
     color: #050505;
 }
 
 h2 {
+    text-align: center;
     color: #050505;
 }
 
