@@ -12,6 +12,7 @@ header img {
     height: 120px;
     object-fit: cover;
     margin: 0 auto;
+    margin-top: 24px;
 }
 
 /* Headings */
