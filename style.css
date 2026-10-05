@@ -8,50 +8,183 @@ body {
 
 /* Header image */
 header img {
-    width: 100%;
+    display: block;
+    width: 1080px;
     height: 120px;
     object-fit: cover;
-    margin: 0 auto;
-    margin-top: 24px;
+    margin: 0px auto 0;
 }
 
 /* Headings */
-h1, h2, h3, p {
+h2, h3{
     text-align: center;
 }
 
-h2, h2, h3, p {
-    color: #050505;
+h1, p{
+    text-align: center;
 }
 
-p {
+h2, h2, h3, p, ol {
+    color: #3e3b3b;
+}
+
+p, ol {
     font-family: 'Courier New', Courier, monospace;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    margin: 12px auto;
+}
+nav a {
+    text-decoration: none;
+    color: #3e3b3b;
+    font-weight: bold;
+    margin: 0 12px;
+}
+nav a:hover {
+    color: #050505;
+    text-decoration: underline;
 }
 
 /* Cards */
 .card {
-    background-color: #D9C7B0;
+    background-color: #e1d4c3;
     padding: 12px;
     margin: 12px auto;
-    max-width: 640px;
+    max-width: 1024px;
     border-radius: 4px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card2 {
-    background-color: #6d6760;
+    background-color: #e1d4c3;
     padding: 12px;
     margin: 12px auto;
-    max-width: 640px;
+    max-width: 1024px;
     border-radius: 4px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #473e3e;
+}
+
+.steps {
+    display: flex;
+    gap: 12px;
+    max-width: 90%;
+    margin: 12px auto;
+}
+
+.steps .card {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+/* Actions */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
 }
 
 /* Footer */
 footer {
     border-top: 1px solid #050505;
+    border-left: 1px solid #050505;
+    border-right: 1px solid #050505;
+    border-radius: 4px;
     background-color: #D9C7B0;
     color: black;
-    text-align: end;
+    text-align: center;
     padding: 12px;
+    max-width: 1024px;
+    margin: 0 auto;
+    object-fit: cover;
+    align-items: center;
+}
+
+/* Game area */
+.scene {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 200px;
+    margin: 20px auto;
+    border-bottom: 3px solid #050505;   /* the ground */
+}
+
+/* Emrah Dino */
+.dino {
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    width: 90px;
+    height: 80px;
+}
+
+/* All dino parts: same color, free positioning */
+.dino div {
+    position: absolute;
+    background-color: #535353;
+}
+
+.head {
+    left: 45px;
+    top: 0;
+    width: 45px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.eye {
+    left: 70px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    background-color: #EBDECD !important;   /* same as page background */
+}
+
+.body {
+    left: 20px;
+    top: 25px;
+    width: 45px;
+    height: 35px;
+    border-radius: 2px;
+}
+
+.tail {
+    left: 0;
+    top: 28px;
+    width: 25px;
+    height: 14px;
+    border-radius: 2% 0 0 10px;
+}
+
+.arm {
+    left: 60px;
+    top: 38px;
+    width: 12px;
+    height: 5px;
+}
+
+.leg {
+    top: 60px;
+    left: 30px;
+    width: 8px;
+    height: 20px;
+}
+
+/*  animations */
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 100px; }
+    100% { bottom: 0; }
+} 
+
+.dino.jumping {
+    animation: jump 0.2s ease-in-out;
+}
+
+.scene:active .dino {
+    animation: jump 0.2s ease-in-out;
 }
