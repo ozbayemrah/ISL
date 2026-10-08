@@ -212,3 +212,15 @@ footer {
     background-color: #ffcc00;
     transition: background-color 0s;
 }
+
+/* p5 canvas container */
+#sketch-holder {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#sketch-holder canvas {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
